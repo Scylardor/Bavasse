@@ -21,7 +21,7 @@ class NewClientController(object):
         if new_client.status is ClientStatus.NEED_OAUTH_CONNECTION:
             self.authenticating_client = new_client
             self.view.ShowOAuthDialog(new_client)
-        elif self.mastodon_client.status is ClientStatus.CONNECTED:
+        elif new_client.status is ClientStatus.CONNECTED:
             self.AddToConnectedClients(new_client)
 
     def ConnectClientOAuth(self, oauth_token):
