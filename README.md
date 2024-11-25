@@ -4,6 +4,10 @@ _bavasser_, verb [ intransitive ] : to chat (in French)
 
 This is a simple app written in Python Tk that makes it easy to post on multiple social networks at the same time.
 
+# Install
+
+```pip install -r requirements.txt```
+
 # Why?
 
 I have accounts on X/Twitter, Mastodon, Bluesky, Facebook... and sometimes I'd like to share the same message across multiple platforms.
