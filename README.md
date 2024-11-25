@@ -15,3 +15,4 @@ I decided to come up with my own, very bare-bones but functional solution.
 # Supported social networks
 
 - Mastodon (needs OAuth authentication)
+- Bluesky (needs to create an App Password in your user settings)

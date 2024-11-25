@@ -29,13 +29,13 @@ class PostView(object):
                 variable=checkbox_var,
                 command=lambda i=i, var=checkbox_var: self.controller.ToggleClientPosting(i, var.get())
             )
-            checkbox.grid(row=i+1, column=0, pady=0)
+            checkbox.grid(row=i + 1, column=0, pady=0)
             self.checkboxes.append(checkbox_var)  # Add the variable to the list
 
         # Reposition the post buttons
         self.post_btn.grid_forget()
-        self.post_btn.grid(row=len(self.checkboxes)+2, column=0, pady=0)
+        self.post_btn.grid(row=len(self.checkboxes) + 2, column=0, pady=0)
         self.post_status.grid_forget()
 
     def ShowPostSuccessful(self):
-        self.post_status.grid(row=len(self.checkboxes)+3, column=0, pady=0)
+        self.post_status.grid(row=len(self.checkboxes) + 3, column=0, pady=0)

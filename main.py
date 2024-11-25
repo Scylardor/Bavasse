@@ -1,6 +1,6 @@
 import tkinter as tk
 
-from clients import MastodonClient
+from clients import MastodonClient, BlueskyClient
 from models import ConnectedClients, PostingClients
 from views import BavasseView
 
@@ -16,7 +16,7 @@ class App(tk.Tk):
         self.name = 'Bavasse'
         self.savedata_folder = Path('bavasse_data')
 
-        self.connected_clients = ConnectedClients([MastodonClient.LookupExistingClients], self.name, self.savedata_folder)
+        self.connected_clients = ConnectedClients([MastodonClient.LookupExistingClients, BlueskyClient.LookupExistingClients], self.name, self.savedata_folder)
         self.posting_clients = PostingClients(len(self.connected_clients.clients))
 
         self.main_view = BavasseView(self)
